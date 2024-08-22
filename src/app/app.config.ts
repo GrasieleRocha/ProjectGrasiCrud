@@ -2,7 +2,6 @@ import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } fr
 import { provideRouter, RouterModule } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { provideClientHydration } from '@angular/platform-browser';
-
 import { routes } from './app.routes';
 import { FormsModule } from '@angular/forms';
 

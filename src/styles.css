@@ -4,6 +4,7 @@
   box-sizing: border-box;
   outline: none;
   font-family: "Roboto", sans-serif;
+  color: var(--text);
 }
 
 :root {
@@ -44,14 +45,73 @@ app-user-list td {
   background-color: #fdfdfd;
 }
 
-
 app-user-list .button-list {
   color: var(--button);
-  border-radius: 4px;
+  border-radius: 4px var;
   padding: 8px 8px;
   margin: 0 8px;
   font-size: 0.9em;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+/**********************STYLE FORM-LIST**********************/
+app-user-form .container-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+  font-size: 1em;
+  color: var(--text);
+  display: flex;
+}
+
+app-user-form form {
+  font-size: 0.7em;
+  width: 80%;
+  border-radius: 4px;
+  padding: 50px 0px;
+}
+
+app-user-form input {
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  padding: 0.2em;
+}
+
+app-user-form #Nome {
+  width: 40%;
+}
+app-user-form .label-Nome{
+  padding-bottom: 20px;
+}
+
+app-user-form #Email {
+  width: 28%;
+}
+
+app-user-form #DataNascimento {
+  width: 52%;
+}
+
+app-user-form #Sexo {
+  width: 60%;
+}
+
+.container-dtnascimento-sexo-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+button {
+  background-color: var(--button);
+  border-radius: 4px;
+  color: var(--text-button);
+  border-color: var(--border);
+  padding: 5px 2%;
+  font-size: 0.7em;
 }

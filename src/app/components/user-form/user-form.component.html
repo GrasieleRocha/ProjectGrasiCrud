@@ -1,11 +1,34 @@
-<form (ngSubmit)="saveUser()">
-  <div>
-    <label for="name">Nome:</label>
-    <input id="name" [(ngModel)]="user.name" name="name" required />
-  </div>
-  <div>
-    <label for="email">Email:</label>
-    <input id="email" [(ngModel)]="user.email" name="email" required />
-  </div>
-  <button type="submit">{{ isEditMode ? 'Atualizar' : 'Criar' }} Utilizador</button>
-</form>
+<div class="container-form">
+  <form (ngSubmit)="saveUser()">
+    <div class="label-Nome">
+      <label for="name">Nome: </label>
+      <input id="Nome" [(ngModel)]="user.Nome" name="Nome" required />
+    </div>
+    <div class="label-Email">
+      <label for="Email">Email: </label>
+      <input id="Email" [(ngModel)]="user.Email" name="Email" required />
+    </div>
+    <div class="container-dtnascimento-sexo-button">
+      <div>
+        <label for="DataNascimento">Data de Nascimento: </label>
+        <input
+          id="DataNascimento"
+          [(ngModel)]="user.DataNascimento"
+          name="DataNascimento"
+          required
+        />
+      </div>
+      <div>
+        <label for="Sexo">Sexo:</label>
+        <select id="Sexo" [(ngModel)]="user.Sexo" name="Sexo" required>
+          <option value="" disabled selected>Selecionar</option>
+          <option value="F">Feminino</option>
+          <option value="M">Masculino</option>
+        </select>
+      </div>
+      <button type="submit">
+        {{ isEditMode ? "Atualizar" : "Criar" }} Salvar
+      </button>
+    </div>
+  </form>
+</div>
