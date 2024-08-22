@@ -1,0 +1,11 @@
+<form (ngSubmit)="saveUser()">
+  <div>
+    <label for="name">Nome:</label>
+    <input id="name" [(ngModel)]="user.name" name="name" required />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="user.email" name="email" required />
+  </div>
+  <button type="submit">{{ isEditMode ? 'Atualizar' : 'Criar' }} Utilizador</button>
+</form>
