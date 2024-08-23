@@ -115,3 +115,72 @@ button {
   padding: 5px 2%;
   font-size: 0.7em;
 }
+
+/**********************Navbar**********************/
+.container-nav{
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.navbar {
+  
+  padding: 10px;
+  display: flex;
+  gap:15px;
+  width: 80%;
+  align-items:center;
+  padding-left: 7em;
+}
+
+.navbar-brand {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  color: #555;
+}
+
+/**********************Footer**********************/
+.container-footer {
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 0; 
+  font-weight: 600;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  min-height: calc(100% - 60px); 
+}
+
+.container-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
