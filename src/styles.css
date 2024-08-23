@@ -71,9 +71,13 @@ app-user-form .container-form {
 app-user-form form {
   font-size: 0.9em;
   width: 80%;
-  padding: 60px 13px;
+  padding: 40px 13px;
   border: 1px solid var(--border);
   border-radius: 4px;
+}
+h4{
+ color: var(--text);
+  padding-bottom: 60px;
 }
 
 app-user-form input {
@@ -84,7 +88,7 @@ app-user-form input {
 }
 
 app-user-form #Nome {
-  width: 40%;
+  width: 45%;
 }
 app-user-form .label-Nome{
   padding-bottom: 20px;
@@ -132,7 +136,7 @@ button {
   
   padding: 10px;
   display: flex;
-  gap:15px;
+  gap:25px;
   width: 80%;
   align-items:center;
   padding-left: 8em;
@@ -152,7 +156,7 @@ button {
 }
 
 .nav-item {
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .nav-link {
