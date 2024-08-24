@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 export class UserFormComponent implements OnInit {
   user: any = { Nome: '', Email: '', DataNascimento: '', Sexo: '' };
   isEditMode = false;
+  errorMessage = '';  // Adiciona uma mensagem de erro para feedback ao usuário
 
   constructor(
     private apiService: ApiService,
@@ -32,6 +33,13 @@ export class UserFormComponent implements OnInit {
   }
 
   saveUser(): void {
+    // Verifica se todos os campos obrigatórios estão preenchidos
+    if (!this.user.Nome || !this.user.Email || !this.user.DataNascimento || !this.user.Sexo) {
+      this.errorMessage = 'Todos os campos devem ser preenchidos.';
+      return;
+    }
+
+    // Se todos os campos estiverem preenchidos, continua com a chamada à API
     if (this.isEditMode) {
       this.apiService.updateUser(this.user.id, this.user).subscribe(() => {
         this.router.navigate(['/users']);

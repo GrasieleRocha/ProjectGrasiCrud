@@ -132,6 +132,11 @@ button:hover {
   color: var(--text-button); 
   border-color: var(--border); 
 }
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
 
 /**********************Navbar**********************/
 .container-nav{

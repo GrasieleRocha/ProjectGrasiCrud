@@ -9,7 +9,7 @@
     </div>
     <div class="label-Email">
       <label for="Email">Email: </label>
-      <input id="Email" [(ngModel)]="user.Email" name="Email" required />
+      <input id="Email" [(ngModel)]="user.Email" name="Email" required /> 
     </div>
     <div class="container-dtnascimento-sexo-button">
       <div>
@@ -32,6 +32,11 @@
       <button type="submit">
         {{ isEditMode ? "Atualizar" : "Criar" }} Salvar
       </button>
+    </div>
+
+    <!-- Mensagem de erro -->
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
     </div>
   </form>
 </div>
