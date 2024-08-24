@@ -37,8 +37,10 @@ export class UserListComponent implements OnInit {
   }
 
   deleteUser(userId: number): void {
-    this.apiService.deleteUser(userId).subscribe(() => {
-      this.users = this.users.filter((user) => user.PessoaId !== userId);
-    });
+    if (confirm('Tem certeza que deseja excluir este usuário?')) { 
+      this.apiService.deleteUser(userId).subscribe(() => {
+        this.users = this.users.filter((user) => user.PessoaId !== userId);
+      });
+    }
   }
 }

@@ -21,7 +21,6 @@
   background-color: var(--border);
 }
 .navbar {
-  
   padding: 10px;
   display: flex;
   gap:25px;
@@ -40,7 +39,6 @@
   margin: 0;
   padding: 0;
   display: flex;
-  
 }
 
 .nav-item {
