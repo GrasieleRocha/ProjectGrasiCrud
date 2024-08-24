@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { Router, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; // Import FormsModule para ngModel
 
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css'],
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [CommonModule, FormsModule], // Adicione FormsModule aqui
 })
 export class UserListComponent implements OnInit {
   users: any[] = [];
@@ -17,24 +18,27 @@ export class UserListComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.getAllUsers().subscribe((data) => {
-      // Adiciona uma flag isEditing para cada utilizador
-      this.users = data.map(user => ({ ...user, isEditing: false }));
+      this.users = data.map(user => ({ ...user, editing: false })); // Adiciona a flag 'editing' a cada usuário
     });
   }
 
   editUser(user: any): void {
-    user.isEditing = true; // Ativa o modo de edição
+    user.editing = !user.editing; // Alterna o estado de edição
   }
 
   saveUser(user: any): void {
-    this.apiService.updateUser(user.id, user).subscribe(() => {
-      user.isEditing = false; // Desativa o modo de edição após salvar
-    });
+    if (user.PessoaId) {
+      this.apiService.updateUser(user.PessoaId, user).subscribe(() => {
+        user.editing = false; // Sai do modo de edição após salvar
+      });
+    } else {
+      console.error('O ID do usuário é indefinido!');
+    }
   }
 
   deleteUser(userId: number): void {
     this.apiService.deleteUser(userId).subscribe(() => {
-      this.users = this.users.filter((user) => user.id !== userId);
+      this.users = this.users.filter((user) => user.PessoaId !== userId);
     });
   }
 }

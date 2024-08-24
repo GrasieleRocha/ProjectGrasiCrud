@@ -15,14 +15,41 @@
     <tbody>
       <tr *ngFor="let user of users">
         <td>{{ user.PessoaId }}</td>
-        <td>{{ user.Nome }}</td>
-        <td>{{ user.Email }}</td>
-        <td>{{ user.DataNascimento }}</td>
-        <td>{{ user.Sexo }}</td>
+        <td>
+          <ng-container *ngIf="!user.editing">{{ user.Nome }}</ng-container>
+          <ng-container *ngIf="user.editing">
+            <input [(ngModel)]="user.Nome" />
+          </ng-container>
+        </td>
+        <td>
+          <ng-container *ngIf="!user.editing">{{ user.Email }}</ng-container>
+          <ng-container *ngIf="user.editing">
+            <input [(ngModel)]="user.Email" />
+          </ng-container>
+        </td>
+        <td>
+          <ng-container *ngIf="!user.editing">{{ user.DataNascimento }}</ng-container>
+          <ng-container *ngIf="user.editing">
+            <input [(ngModel)]="user.DataNascimento" />
+          </ng-container>
+        </td>
+        <td>
+          <ng-container *ngIf="!user.editing">{{ user.Sexo }}</ng-container>
+          <ng-container *ngIf="user.editing">
+            <input [(ngModel)]="user.Sexo" />
+          </ng-container>
+        </td>
         <td>
           <div class="button-list">
-            <a (click)="editUser(user)" title="Editar"><i class="fas fa-pencil-alt"></i></a>
-            <a (click)="deleteUser(user.id)" title="Excluir"><i class="fas fa-trash"></i></a>
+            <a (click)="editUser(user)" title="Editar">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a (click)="saveUser(user)" *ngIf="user.editing" title="Salvar">
+              <i class="fas fa-save"></i>
+            </a>
+            <a (click)="deleteUser(user.PessoaId)" title="Excluir">
+              <i class="fas fa-trash"></i>
+            </a>
           </div>
         </td>
       </tr>
