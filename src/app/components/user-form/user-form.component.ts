@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class UserFormComponent implements OnInit {
   user: any = { Nome: '', Email: '', DataNascimento: '', Sexo: '' };
   isEditMode = false;
-  errorMessage = '';  // Adiciona uma mensagem de erro para feedback ao usuário
+  errorMessage = '';  
 
   constructor(
     private apiService: ApiService,

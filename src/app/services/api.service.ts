@@ -11,7 +11,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   // Métodos CRUD
-  getUsers(): Observable<any[]> {
+  getAllUsers(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
 

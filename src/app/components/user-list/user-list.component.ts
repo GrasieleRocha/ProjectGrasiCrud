@@ -16,18 +16,25 @@ export class UserListComponent implements OnInit {
   constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {
-    this.apiService.getUsers().subscribe((data) => {
-      this.users = data;
+    this.apiService.getAllUsers().subscribe((data) => {
+      // Adiciona uma flag isEditing para cada utilizador
+      this.users = data.map(user => ({ ...user, isEditing: false }));
     });
   }
 
   editUser(user: any): void {
-    this.router.navigate(['/users/edit', user.id]); 
+    user.isEditing = true; // Ativa o modo de edição
+  }
+
+  saveUser(user: any): void {
+    this.apiService.updateUser(user.id, user).subscribe(() => {
+      user.isEditing = false; // Desativa o modo de edição após salvar
+    });
   }
 
   deleteUser(userId: number): void {
     this.apiService.deleteUser(userId).subscribe(() => {
-      this.users = this.users.filter(user => user.id !== userId);
+      this.users = this.users.filter((user) => user.id !== userId);
     });
   }
 }
