@@ -3,6 +3,10 @@
 
 <br>
 
+#### Deploy: https://grasicrud.netlify.app/
+
+<br>
+
 ## Funcionalidades 
 O projeto possui as seguintes funcionalidades  (Create, Read, Update, Delete):
 
@@ -58,6 +62,8 @@ Este projeto foi desenvolvido utilizando as seguintes ferramentas e linguagens:
 - **Design de Interface** : ![Figma](https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
 - **Gerenciamento de Projetos**  : ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=trello&logoColor=white)
+  
+- **Hospedagem e Deploy** : ![Netlify](https://img.shields.io/badge/Netlify-%2300C7B7.svg?style=for-the-badge&logo=netlify&logoColor=white)
 
 
  <br>
@@ -65,22 +71,22 @@ Este projeto foi desenvolvido utilizando as seguintes ferramentas e linguagens:
 ## Capturas de Tela
 
 ### Figma
+![figma](https://github.com/user-attachments/assets/91e6d58d-7cbb-49d0-8cee-39d31373fd22)
 
-![Figma](assets/readme/figma.png)
 
 ### Trello
-![Trello](assets/readme/trello.png)
+
+![trello](https://github.com/user-attachments/assets/41db5864-c9e1-441e-958e-352bce90e8b8)
 
 ### Projeto
-![Page Home](assets/readme/pageHomeCrud.png)
+![pageHomeCrud](https://github.com/user-attachments/assets/f6ca81b1-708d-43ae-a5e4-a4b292fb841f)
+![pageEditCrud](https://github.com/user-attachments/assets/83243ba3-fc7e-49ec-b835-16fea243ce1e)
 
-<br>
-![Page Editar](assets/readme/pageEditCrud.png)
+#### Mensagem de erro ao não preencher todos os campos.
+![msgerror](https://github.com/user-attachments/assets/d74b8dd6-4d2d-4c6b-bfe3-a4b1ce7c2457)
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 21607a24be5e1c0cb20f981b3a73f883e068f1fa
+
 <br>
 
 ## Developer
