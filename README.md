@@ -77,6 +77,10 @@ Este projeto foi desenvolvido utilizando as seguintes ferramentas e linguagens:
 <br>
 ![Page Editar](assets/readme/pageEditCrud.png)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21607a24be5e1c0cb20f981b3a73f883e068f1fa
 <br>
 
 ## Developer

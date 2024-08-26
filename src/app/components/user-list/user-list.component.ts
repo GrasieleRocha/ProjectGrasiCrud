@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // Import FormsModule para ngModel
+import { FormsModule } from '@angular/forms'; 
+
 
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css'],
   standalone: true,
-  imports: [CommonModule, FormsModule], // Adicione FormsModule aqui
+  imports: [CommonModule, FormsModule], 
 })
 export class UserListComponent implements OnInit {
   users: any[] = [];
