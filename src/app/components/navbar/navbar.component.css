@@ -9,7 +9,7 @@
   gap:25px;
   width: 80%;
   align-items:center;
-  padding-left: 8em;
+  padding-left: 10.5%;
 }
 
 .navbar-brand {
@@ -36,4 +36,18 @@
 
 .nav-link:hover {
   color: var(--hover);
+}
+
+/**********************medias queries**********************/
+
+@media (max-width: 700px) {
+  body {
+    padding-left: 4%;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding-left: 2%;
+  }
 }
