@@ -1,0 +1,83 @@
+/**********************STYLE FORM-LIST**********************/
+app-user-form .container-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  width: 100%;
+  font-size: 1em;
+  color: var(--text);
+  display: flex;
+}
+
+app-user-form form {
+  font-size: 0.9em;
+  width: 80%;
+  padding: 40px 23px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+h4{
+ color: var(--text);
+  padding-bottom: 60px;
+}
+
+app-user-form input {
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  padding: 0.2em;
+}
+
+app-user-form #id {
+  width: 45%;
+}
+app-user-form #Nome {
+  width: 45%;
+}
+app-user-form .label-Nome{
+  padding-bottom: 20px;
+}
+
+app-user-form #Email {
+  width: 28%;
+}
+
+app-user-form #DataNascimento {
+  width: 48%;
+}
+
+app-user-form #Sexo {
+  width: 62%;
+  font-size: 0.9em;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.container-dtnascimento-sexo-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+button {
+  background-color: var(--button);
+  border-radius: 3px;
+  color: var(--text-button);
+  border-color: var(--border);
+  padding: 5px 2%;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+button:hover {
+  background-color: var(--hover); 
+  color: var(--text-button); 
+  border-color: var(--border); 
+}
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}

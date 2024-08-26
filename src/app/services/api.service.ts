@@ -10,7 +10,6 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  // Métodos CRUD
   getAllUsers(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }

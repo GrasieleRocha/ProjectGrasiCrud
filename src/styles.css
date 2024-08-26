@@ -15,47 +15,6 @@
   --border: #ced4da;
 }
 
-/**********************Navbar**********************/
-.container-nav{
-  width: 100%;
-  background-color: var(--border);
-}
-.navbar {
-  padding: 10px;
-  display: flex;
-  gap:25px;
-  width: 80%;
-  align-items:center;
-  padding-left: 8em;
-}
-
-.navbar-brand {
-  color: var(--text);
-  font-size: 20px;
-  font-weight: bold;
-}
-.navbar-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.nav-item {
-  margin-right: 25px;
-}
-
-.nav-link {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.nav-link:hover {
-  color: var(--hover);
-}
-
-
 /**********************STYLE FORM-LIST**********************/
 app-user-form .container-form {
   display: flex;
@@ -139,7 +98,6 @@ button:hover {
   margin-top: 10px;
   font-size: 14px;
 }
-
 
 /**********************STYLE USER-LIST**********************/
 

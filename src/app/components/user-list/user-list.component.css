@@ -1,0 +1,48 @@
+/**********************STYLE USER-LIST**********************/
+
+app-user-list .container {
+  width: 100%;
+  align-items: center;
+  font-size: 0.7em;
+}
+
+app-user-list table {
+  width: 80%;
+  align-items: center;
+  margin-inline: auto;
+  padding: 18px 5px;
+  justify-content: space-between;
+}
+
+app-user-list thead {
+  align-items: center;
+  background-color: var(--border);
+  border-radius: 4px;
+}
+
+app-user-list td {
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: #fdfdfd;
+}
+
+app-user-list .button-list {
+  border-radius: 4px var;
+  padding: 8px 8px;
+  margin: 0 8px;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button-list i {
+  color: var(--button); 
+  transition: color 0.3s ease; 
+}
+
+.button-list a:hover i {
+  color: var(--hover); 
+}
