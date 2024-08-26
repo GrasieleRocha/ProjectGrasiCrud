@@ -18,18 +18,18 @@ export class UserListComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.getAllUsers().subscribe((data) => {
-      this.users = data.map(user => ({ ...user, editing: false })); // Adiciona a flag 'editing' a cada usuário
+      this.users = data.map(user => ({ ...user, editing: false }));
     });
   }
 
   editUser(user: any): void {
-    user.editing = !user.editing; // Alterna o estado de edição
+    user.editing = !user.editing; 
   }
 
   saveUser(user: any): void {
     if (user.PessoaId) {
       this.apiService.updateUser(user.PessoaId, user).subscribe(() => {
-        user.editing = false; // Sai do modo de edição após salvar
+        user.editing = false; 
       });
     } else {
       console.error('O ID do usuário é indefinido!');
